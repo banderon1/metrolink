@@ -62,8 +62,9 @@ body {
 .montage {
     width: 800px;
     margin: auto;
+    display: none;
 }
-.animated-box img {
+.row div img {
     display: block;
     margin: auto;
     padding: 3px 0;
