@@ -59,29 +59,21 @@ body {
 
 }
 
+.montage, .footer {
+    padding-top: 20px;
+    width: 600px;
+}
 .montage {
-    width: 800px;
-    margin: auto;
     display: none;
+}
+.row div {
+    padding: 0;
 }
 .row div img {
     display: block;
     margin: auto;
-    padding: 3px 0;
+    padding: 4px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
