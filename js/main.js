@@ -20,6 +20,8 @@ function showNextMontage(page) {
     $('#page' + nextPage + ' .row div').addClass('magictime ' + nextAnimation);
     $('#page' + page).hide();
     $('#page' + nextPage).show();
+    var snd = new Audio("audio/whoosh.wav"); // buffers automatically when created
+    snd.play();
     setTimeout(function(){
         $('#page' + nextPage + ' .row div').removeClass('magictime ' + nextAnimation);
     }, 3000);
