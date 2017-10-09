@@ -24,3 +24,10 @@ function showNextMontage(page) {
         showNextMontage(nextPage);
     }, 8000);
 }
+
+$('.video').click(function(e){
+    e.stopPropagation();
+    clearTimeout(timeoutMontage);
+    var videoId = parseInt($(this).attr('id').replace(/\D/g,''));
+    console.log('video click' + videoId);
+});
