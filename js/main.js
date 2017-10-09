@@ -1,10 +1,12 @@
 //setInterval(function(){
+var timeoutMontage;
 $(function(){
     showNextMontage(0);
 });
 
 $('.montage').click(function(){
     var page = parseInt($(this).attr('id').replace(/\D/g,''));
+    clearTimeout(timeoutMontage);
     showNextMontage(page);
 });
 
@@ -18,7 +20,7 @@ function showNextMontage(page) {
     $('#page' + nextPage).show();
     var snd = new Audio("audio/whoosh.wav"); // buffers automatically when created
     snd.play();
-    setTimeout(function(){
+    timeoutMontage = setTimeout(function(){
         showNextMontage(nextPage);
     }, 8000);
 }
