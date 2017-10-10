@@ -84,6 +84,23 @@ body {
     padding: 3px 0;
 }
 
+.modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal.fade .modal-dialog {
+    transform: translate(0, -100%);
+}
+
+.modal.in .modal-dialog {
+    transform: translate(0, 0);
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
