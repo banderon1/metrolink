@@ -14,26 +14,23 @@ $(function(){
         clearTimeout(timeoutMontage);
         videos = [
             '',
-            '07-13-17_National Icecream Month (Ben & Jerry\'s)_B-Roll',
-            'How to Ride Metrolink',
-            'Metrolink 25 Years - Draft 5',
-            'Metrolink Destination Series  Beaches',
-            'Metrolink Destination Series  Hollywood',
-            'Metrolink Destination Series  Olvera Street',
-            'Metrolink Destinations - San Juan Capistrano',
-            'Metrolink_PTC'
+            '//www.youtube.com/embed/fcDRFCeq_9Q',
+            '//www.youtube.com/embed/UP7Ccni9gjM',
+            '//www.youtube.com/embed/tSmyOFvIy04',
+            '//www.youtube.com/embed/ypTEQWy7cuQ ',
+            '//www.youtube.com/embed/OTmGj9OMguM',
+            '//www.youtube.com/embed/vuhSJAtGOVY',
+            '//www.youtube.com/embed/ZTmtFJAq2MM',
+            '//www.youtube.com/embed/hg4Z4BAKHWU'
         ];
         $('#videoModal').modal();
-        var myVideo = document.getElementById("videoPopup");
         var videoId = parseInt($(this).attr('id').replace(/\D/g,''));
-        myVideo.src = 'img/videos/' + encodeURIComponent(videos[videoId]) + '.mp4';
-        myVideo.play();
+        $("#videoPopup").attr('src', videos[videoId]);
     });
 
     //pause the video if the popup is closed
     $('#videoModal').on('hidden.bs.modal', function (e) {
-        var myVideo = document.getElementById("videoPopup");
-        myVideo.pause();
+        $("#videoPopup").attr('src', '');
     });
 });
 
