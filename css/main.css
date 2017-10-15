@@ -63,6 +63,7 @@ body {
     padding-top: 20px;
     width: 600px;
 }
+.footer {display: none}
 .montage {
     display: none;
 }
